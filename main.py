@@ -1,11 +1,13 @@
-a = int(input())
-c = input()
-b = int(input())
+a = int(input('Введите число 1 '))
+c = input('Введите операцию ')
+b = int(input('Введите число 2 '))
 if c == '+':
     print(a + b)
 if c == '-':
     print(a - b)
 if c == '*':
     print(a * b)
-if c == '/':
+if c == '/' and b == 0:
+    print('НА НОЛЬ ДЕЛИТЬ НЕЛЬЗЯ')
+elif c == '/' and b != 0:
     print(a / b)
