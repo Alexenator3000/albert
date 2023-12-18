@@ -1,14 +1,23 @@
-import time
-a = int(input())
-print(a)
-def some_function(a):
-    x = 1
-    c = []
-    while x <= a:
-        c.append(x)
-        x += 1
-    return c
-startt = time.time()
-print(some_function(a))
-endt = time.time()
-print(startt-endt)
+variors = int(input('Количество воинов '))
+list = list()
+x = 0
+index = 0
+while x < variors:
+    x = x + 1
+    list.append(x)
+k = int(input('Убитый воин '))
+while len(list) > 1:
+    if index != 0:
+        index = len(list) - index
+    else:
+        index = k - 1
+    if index < 0:
+        index = index + k - 1
+    while index <= (len(list) - 1):
+        del list[index]
+        if index == len(list):
+            index = 0
+            break
+        else:
+            index = index + (k - 1)
+print(list)
